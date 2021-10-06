@@ -19,6 +19,7 @@ const App = () => {
     });
     setList(newList);
   }
+  
   const handleTaskStatus = (taskid: number) => {
     let newList = [...list];
     const listCrowd = newList.map((item) => {
@@ -26,6 +27,14 @@ const App = () => {
         item.done = !item.done;
       }
       return item;
+    });
+    setList(listCrowd);
+  }
+
+  const handleTaskdelete = (taskid: number) => {
+    let newList = [...list];
+    const listCrowd = newList.filter((item, index, newList) => {
+      return item.id !== taskid;
     });
     setList(listCrowd);
   }
@@ -39,7 +48,11 @@ const App = () => {
         <AddArea onEnter={handleAddTask}/>
 
         {list.map((item, index)=>(
-          <ListItem key={index} item={item} onChangeStatus={handleTaskStatus}/>
+          <ListItem 
+            key={index} 
+            item={item} 
+            onChangeStatus={handleTaskStatus}
+            onDel={handleTaskdelete}/>
         ))}
 
       </C.Area>
