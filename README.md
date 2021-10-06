@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# Todo App B7Web
+
+Projeto criado durante a Semana do React da B7Web, projeto 1 de 5.
+
+Nesse projeto foram implementados os conceitos básicos do React.
+
+Como adição pessoal, implementei as funções responsáveis por deletar as tarefas da lista.
+
+
+# Especificações do React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
